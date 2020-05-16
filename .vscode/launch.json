@@ -1,0 +1,45 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Lambda: Exemple Function",
+            "console": "integratedTerminal",
+            "program": "${workspaceRoot}/node_modules/serverless/bin/serverless",
+            "args": ["invoke", "local", "--function", "app", "-d", "{ \"content\": \"Teste\" }"],
+            "outFiles": [
+                "${workspaceRoot}/.webpack/**/*.js"
+            ],
+            "sourceMaps": true,
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Jest: All Tests",
+            "program": "${workspaceFolder}/node_modules/.bin/jest",
+            "args": ["--runInBand"],
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen",
+            "disableOptimisticBPs": true
+        },
+
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Jest: Current File",
+            "program": "${workspaceFolder}/node_modules/.bin/jest",
+            "args": [
+              "${fileBasenameNoExtension}",
+              "--config",
+              "jest.config.js"
+            ],
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen",
+            "disableOptimisticBPs": true
+          }
+    ]
+}

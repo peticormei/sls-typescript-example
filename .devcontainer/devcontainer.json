@@ -1,0 +1,15 @@
+{
+    "name": "sls-typescript-example",
+    "dockerComposeFile": "docker-compose.yml",
+    "service": "serverless",
+    "workspaceFolder": "/workspace",
+    "shutdownAction": "stopCompose",
+    "settings": {
+        "terminal.integrated.shell.linux": "/bin/zsh"
+    },
+    "extensions": [
+        "eamodio.gitlens",
+        "dbaeumer.vscode-eslint"
+    ],
+    "postCreateCommand": "npm i"
+}
